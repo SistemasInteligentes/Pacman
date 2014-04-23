@@ -28,6 +28,7 @@ import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
+import static sun.applet.AppletResourceLoader.getImage;
 
 public class Board extends JPanel implements ActionListener {
 
@@ -58,6 +59,8 @@ public class Board extends JPanel implements ActionListener {
     private int[] ghostx, ghosty, ghostdx, ghostdy, ghostspeed;
 
     private Image ghost;
+    
+    
     private Image pacman1, pacman2up, pacman2left, pacman2right, pacman2down;
     private Image pacman3up, pacman3down, pacman3left, pacman3right;
     private Image pacman4up, pacman4down, pacman4left, pacman4right;
@@ -424,6 +427,7 @@ public class Board extends JPanel implements ActionListener {
         switch (pacmananimpos) {
             case 1:
                 g2d.drawImage(pacman2right, pacmanx + 1, pacmany + 1, this);
+                
                 break;
             case 2:
                 g2d.drawImage(pacman3right, pacmanx + 1, pacmany + 1, this);
@@ -530,20 +534,20 @@ public class Board extends JPanel implements ActionListener {
 
     private void loadImages() {
 
-        ghost = new ImageIcon("images/ghost.png").getImage();
-        pacman1 = new ImageIcon("images/pacman.png").getImage();
-        pacman2up = new ImageIcon("images/pacman.png").getImage();
-        pacman3up = new ImageIcon("images/pacman.png").getImage();
-        pacman4up = new ImageIcon("images/pacman.png").getImage();
-        pacman2down = new ImageIcon("images/pacman.png").getImage();
-        pacman3down = new ImageIcon("images/pacman.png").getImage();
-        pacman4down = new ImageIcon("images/pacman.png").getImage();
-        pacman2left = new ImageIcon("images/pacman.png").getImage();
-        pacman3left = new ImageIcon("images/pacman.png").getImage();
-        pacman4left = new ImageIcon("images/pacman.png").getImage();
-        pacman2right = new ImageIcon("images/pacman.png").getImage();
-        pacman3right = new ImageIcon("images/pacman.png").getImage();
-        pacman4right = new ImageIcon("images/pacman.png").getImage();
+        ghost = new ImageIcon(getClass().getResource("../images/ghost.png")).getImage();        
+        pacman1 = new ImageIcon(getClass().getResource("pacman.png")).getImage();
+        pacman2up = new ImageIcon(getClass().getResource("pacman.png")).getImage();
+        pacman3up = new ImageIcon(getClass().getResource("pacman.png")).getImage();
+        pacman4up = new ImageIcon(getClass().getResource("pacman.png")).getImage();
+        pacman2down = new ImageIcon(getClass().getResource("pacman.png")).getImage();
+        pacman3down = new ImageIcon(getClass().getResource("pacman.png")).getImage();
+        pacman4down = new ImageIcon(getClass().getResource("pacman.png")).getImage();
+        pacman2left = new ImageIcon(getClass().getResource("pacman.png")).getImage();
+        pacman3left = new ImageIcon(getClass().getResource("pacman.png")).getImage();
+        pacman4left = new ImageIcon(getClass().getResource("pacman.png")).getImage();
+        pacman2right = new ImageIcon(getClass().getResource("pacman.png")).getImage();
+        pacman3right = new ImageIcon(getClass().getResource("pacman.png")).getImage();
+        pacman4right = new ImageIcon(getClass().getResource("pacman.png")).getImage();
 
     }
 
