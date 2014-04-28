@@ -70,20 +70,20 @@ public class Board extends JPanel implements ActionListener {
 
     private final short leveldata[] = {
         19, 26, 26, 26, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 22,
-        21, 0, 0, 0, 17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 20,
-        21, 0, 0, 0, 17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 20,
-        21, 0, 0, 0, 17, 16, 16, 24, 16, 16, 16, 16, 16, 16, 20,
-        17, 18, 18, 18, 16, 16, 20, 0, 17, 16, 16, 16, 16, 16, 20,
-        17, 16, 16, 16, 16, 16, 20, 0, 17, 16, 16, 16, 16, 24, 20,
-        25, 16, 16, 16, 24, 24, 28, 0, 25, 24, 24, 16, 20, 0, 21,
-        1, 17, 16, 20, 0, 0, 0, 0, 0, 0, 0, 17, 20, 0, 21,
-        1, 17, 16, 16, 18, 18, 22, 0, 19, 18, 18, 16, 20, 0, 21,
-        1, 17, 16, 16, 16, 16, 20, 0, 17, 16, 16, 16, 20, 0, 21,
-        1, 17, 16, 16, 16, 16, 20, 0, 17, 16, 16, 16, 20, 0, 21,
-        1, 17, 16, 16, 16, 16, 16, 18, 16, 16, 16, 16, 20, 0, 21,
-        1, 17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 20, 0, 21,
-        1, 25, 24, 24, 24, 24, 24, 24, 24, 24, 16, 16, 16, 18, 20,
-        9, 8, 8, 8, 8, 8, 8, 8, 8, 8, 25, 24, 24, 24, 28
+        21,  0,  0,  0, 17, 16, 16, 16, 16, 16, 16,  0,  0,  0, 20,
+        21,  0,  0,  0, 17, 16, 16, 16, 16, 16, 16,  0,  0,  0, 20,
+        21,  0,  0,  0, 17, 16, 16, 24, 16, 16, 16,  0,  0,  0, 20,
+        17, 18, 18, 18, 16, 16, 20,  0, 17, 16, 16, 16, 16, 16, 20,
+        17, 16, 16, 16, 16, 16, 20,  0, 17, 16, 16, 16, 16, 24, 20,
+        25, 16, 16, 16, 24, 24, 28,  0, 25, 24, 24, 16, 20,  0, 21,
+        1,  17, 16, 20,  0,  0,  0,  0,  0,  0,  0, 17, 20,  0, 21,
+        1,  17, 16, 16, 18, 18, 22,  0, 19, 18, 18, 16, 20,  0, 21,
+        1,  17, 16, 16, 16, 16, 20,  0, 17, 16, 16, 16, 20,  0, 21,
+        1,  17, 16, 16, 16, 16, 20,  0, 17, 16, 16, 16, 20,  0, 21,
+        1,  17, 16, 16, 16, 16, 16, 18, 16, 16, 16, 16, 20,  0, 21,
+        1,  17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 20,  0, 21,
+        1,  25, 24, 24, 24, 24, 24, 24, 24, 24, 16, 16, 16, 18, 20,
+        9,   8,  8,  8,  8,  8,  8,  8,  8,  8, 25, 24, 24, 24, 28
     };
 
     private final int validspeeds[] = {1, 2, 3, 4, 6, 8};
@@ -186,7 +186,7 @@ public class Board extends JPanel implements ActionListener {
         g.drawString(s, scrsize / 2 + 96, scrsize + 16);
 
         for (i = 0; i < pacsleft; i++) {
-            g.drawImage(pacman3left, i * 28 + 8, scrsize + 1, this);
+            g.drawImage(pacman4right, i * 28 + 8, scrsize + 1, this);
         }
     }
 
@@ -535,19 +535,19 @@ public class Board extends JPanel implements ActionListener {
     private void loadImages() {
 
         ghost = new ImageIcon(getClass().getResource("../images/ghost.png")).getImage();        
-        pacman1 = new ImageIcon(getClass().getResource("pacman.png")).getImage();
-        pacman2up = new ImageIcon(getClass().getResource("pacman.png")).getImage();
-        pacman3up = new ImageIcon(getClass().getResource("pacman.png")).getImage();
-        pacman4up = new ImageIcon(getClass().getResource("pacman.png")).getImage();
-        pacman2down = new ImageIcon(getClass().getResource("pacman.png")).getImage();
-        pacman3down = new ImageIcon(getClass().getResource("pacman.png")).getImage();
-        pacman4down = new ImageIcon(getClass().getResource("pacman.png")).getImage();
-        pacman2left = new ImageIcon(getClass().getResource("pacman.png")).getImage();
-        pacman3left = new ImageIcon(getClass().getResource("pacman.png")).getImage();
-        pacman4left = new ImageIcon(getClass().getResource("pacman.png")).getImage();
-        pacman2right = new ImageIcon(getClass().getResource("pacman.png")).getImage();
-        pacman3right = new ImageIcon(getClass().getResource("pacman.png")).getImage();
-        pacman4right = new ImageIcon(getClass().getResource("pacman.png")).getImage();
+        pacman1 = new ImageIcon(getClass().getResource("../images/pacman1.png")).getImage();
+        pacman2up = new ImageIcon(getClass().getResource("../images/pacman2up.png")).getImage();
+        pacman3up = new ImageIcon(getClass().getResource("../images/pacman3up.png")).getImage();
+        pacman4up = new ImageIcon(getClass().getResource("../images/pacman4up.png")).getImage();
+        pacman2down = new ImageIcon(getClass().getResource("../images/pacman2down.png")).getImage();
+        pacman3down = new ImageIcon(getClass().getResource("../images/pacman3down.png")).getImage();
+        pacman4down = new ImageIcon(getClass().getResource("../images/pacman4down.png")).getImage();
+        pacman2left = new ImageIcon(getClass().getResource("../images/pacman2left.png")).getImage();
+        pacman3left = new ImageIcon(getClass().getResource("../images/pacman3left.png")).getImage();
+        pacman4left = new ImageIcon(getClass().getResource("../images/pacman4left.png")).getImage();
+        pacman2right = new ImageIcon(getClass().getResource("../images/pacman2right.png")).getImage();
+        pacman3right = new ImageIcon(getClass().getResource("../images/pacman3right.png")).getImage();
+        pacman4right = new ImageIcon(getClass().getResource("../images/pacman4right.png")).getImage();
 
     }
 
